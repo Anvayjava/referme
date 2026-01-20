@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Detail - ReferMe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Top Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center space-x-8">
+                    <a href="home.html" class="text-2xl font-bold text-blue-600">ReferMe</a>
+                    <div class="hidden md:flex space-x-4">
+                        <a href="home.html" class="text-gray-600 hover:text-gray-900 px-3 py-2">Home</a>
+                        <a href="referrals.html" class="text-gray-600 hover:text-gray-900 px-3 py-2">Referrals</a>
+                        <a href="messages.html" class="text-gray-600 hover:text-gray-900 px-3 py-2 relative">
+                            Messages
+                            <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button onclick="window.location.href='create-post.html'" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 font-semibold">
+                        + New Post
+                    </button>
+                    <a href="profile.html" class="flex items-center space-x-2 hover:bg-gray-100 px-3 py-2 rounded-lg">
+                        <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold">
+                            JD
+                        </div>
+                        <span class="hidden md:block text-sm font-medium">John Doe</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-4xl mx-auto px-4 py-6">
+        <!-- Back Button -->
+        <a href="home.html" class="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4">
+            <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+            Back to Feed
+        </a>
+
+        <!-- Main Post -->
+        <div class="bg-white rounded-lg shadow-sm mb-6">
+            <div class="p-6">
+                <div class="flex items-start justify-between mb-4">
+                    <div class="flex items-start space-x-3">
+                        <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-semibold">
+                            SA
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-900">Sarah Anderson</div>
+                            <div class="text-sm text-gray-500">
+                                <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded text-xs font-medium">Microsoft</span>
+                                <span class="mx-1">•</span>
+                                <span>Senior SWE</span>
+                                <span class="mx-1">•</span>
+                                <span>2h ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="text-gray-400 hover:text-gray-600">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <h1 class="text-2xl font-bold text-gray-900 mb-3">Looking to refer qualified candidates for Azure team!</h1>
+
+                <p class="text-gray-700 mb-4 leading-relaxed">
+                    We're hiring Senior Software Engineers for the Azure Compute team. If you have 5+ years of experience with distributed systems and cloud infrastructure, I'd be happy to refer you. Drop a comment or DM me your resume!
+                </p>
+
+                <p class="text-gray-700 mb-4 leading-relaxed">
+                    Some more details about the role:
+                    <br>• Working on core Azure compute infrastructure
+                    <br>• Building highly scalable and reliable systems
+                    <br>• Great team culture with talented engineers
+                    <br>• Competitive compensation and benefits
+                </p>
+
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">#referral</span>
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">#azure</span>
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">#swe</span>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-100 px-6 py-3 flex items-center justify-between">
+                <div class="flex items-center space-x-6">
+                    <button class="flex items-center space-x-2 text-gray-600 hover:text-blue-600">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+                        </svg>
+                        <span class="text-sm font-medium">Upvote (124)</span>
+                    </button>
+                    <button class="flex items-center space-x-2 text-gray-600 hover:text-blue-600">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                        <span class="text-sm font-medium">Downvote</span>
+                    </button>
+                    <button class="flex items-center space-x-2 text-gray-600 hover:text-blue-600">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path>
+                        </svg>
+                        <span class="text-sm font-medium">Share</span>
+                    </button>
+                </div>
+                <button onclick="window.location.href='messages.html'" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700">
+                    Send DM
+                </button>
+            </div>
+        </div>
+
+        <!-- Comment Section -->
+        <div class="bg-white rounded-lg shadow-sm">
+            <div class="p-6 border-b">
+                <h2 class="text-lg font-semibold text-gray-900 mb-4">32 Comments</h2>
+
+                <!-- Add Comment -->
+                <div class="flex items-start space-x-3">
+                    <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold flex-shrink-0">
+                        JD
+                    </div>
+                    <div class="flex-1">
+                        <textarea
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                            rows="3"
+                            placeholder="Add a comment..."></textarea>
+                        <div class="flex justify-end mt-2">
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700">
+                                Comment
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comments -->
+            <div class="divide-y">
+                <!-- Comment 1 -->
+                <div class="p-6">
+                    <div class="flex items-start space-x-3">
+                        <div class="w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center text-white font-semibold flex-shrink-0">
+                            DL
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center space-x-2 mb-1">
+                                <span class="font-semibold text-gray-900">David Lee</span>
+                                <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded text-xs font-medium">Microsoft</span>
+                                <span class="text-sm text-gray-500">• 1h ago</span>
+                            </div>
+                            <p class="text-gray-700 mb-2">
+                                This is a great opportunity! I've been on the Azure Compute team for 2 years and can vouch for the amazing team culture. The technical challenges are really interesting too.
+                            </p>
+                            <div class="flex items-center space-x-4">
+                                <button class="flex items-center space-x-1 text-gray-600 hover:text-blue-600 text-sm">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+                                    </svg>
+                                    <span>12</span>
+                                </button>
+                                <button class="text-sm text-gray-600 hover:text-blue-600">Reply</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comment 2 with Reply -->
+                <div class="p-6 bg-gray-50">
+                    <div class="flex items-start space-x-3">
+                        <div class="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center text-white font-semibold flex-shrink-0">
+                            PG
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center space-x-2 mb-1">
+                                <span class="font-semibold text-gray-900">Priya Gupta</span>
+                                <span class="text-sm text-gray-500">• 45m ago</span>
+                            </div>
+                            <p class="text-gray-700 mb-2">
+                                I'm interested! I have 6 years of experience with distributed systems at AWS. Can I DM you my resume?
+                            </p>
+                            <div class="flex items-center space-x-4">
+                                <button class="flex items-center space-x-1 text-blue-600 text-sm">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M5 15l7-7 7 7"></path>
+                                    </svg>
+                                    <span>8</span>
+                                </button>
+                                <button class="text-sm text-gray-600 hover:text-blue-600">Reply</button>
+                            </div>
+
+                            <!-- Reply -->
+                            <div class="mt-4 ml-8 flex items-start space-x-3">
+                                <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white font-semibold text-sm flex-shrink-0">
+                                    SA
+                                </div>
+                                <div class="flex-1">
+                                    <div class="flex items-center space-x-2 mb-1">
+                                        <span class="font-semibold text-gray-900">Sarah Anderson</span>
+                                        <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded text-xs font-medium">Microsoft</span>
+                                        <span class="text-sm text-gray-500">• 30m ago</span>
+                                    </div>
+                                    <p class="text-gray-700 mb-2">
+                                        Absolutely! AWS experience would be great. Looking forward to reviewing your resume.
+                                    </p>
+                                    <div class="flex items-center space-x-4">
+                                        <button class="flex items-center space-x-1 text-gray-600 hover:text-blue-600 text-sm">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+                                            </svg>
+                                            <span>5</span>
+                                        </button>
+                                        <button class="text-sm text-gray-600 hover:text-blue-600">Reply</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comment 3 -->
+                <div class="p-6">
+                    <div class="flex items-start space-x-3">
+                        <div class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center text-white font-semibold flex-shrink-0">
+                            MR
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center space-x-2 mb-1">
+                                <span class="font-semibold text-gray-900">Mike Rodriguez</span>
+                                <span class="bg-red-100 text-red-800 px-2 py-0.5 rounded text-xs font-medium">Google</span>
+                                <span class="text-sm text-gray-500">• 20m ago</span>
+                            </div>
+                            <p class="text-gray-700 mb-2">
+                                What's the interview process like for this role? How many rounds?
+                            </p>
+                            <div class="flex items-center space-x-4">
+                                <button class="flex items-center space-x-1 text-gray-600 hover:text-blue-600 text-sm">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+                                    </svg>
+                                    <span>3</span>
+                                </button>
+                                <button class="text-sm text-gray-600 hover:text-blue-600">Reply</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comment 4 -->
+                <div class="p-6 bg-gray-50">
+                    <div class="flex items-start space-x-3">
+                        <div class="w-10 h-10 bg-teal-600 rounded-full flex items-center justify-center text-white font-semibold flex-shrink-0">
+                            LT
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center space-x-2 mb-1">
+                                <span class="font-semibold text-gray-900">Lisa Thompson</span>
+                                <span class="bg-orange-100 text-orange-800 px-2 py-0.5 rounded text-xs font-medium">Amazon</span>
+                                <span class="text-sm text-gray-500">• 10m ago</span>
+                            </div>
+                            <p class="text-gray-700 mb-2">
+                                Is the team open to candidates with strong backend experience but less cloud-specific experience? I have 7 years in distributed systems but mostly on-prem.
+                            </p>
+                            <div class="flex items-center space-x-4">
+                                <button class="flex items-center space-x-1 text-gray-600 hover:text-blue-600 text-sm">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+                                    </svg>
+                                    <span>2</span>
+                                </button>
+                                <button class="text-sm text-gray-600 hover:text-blue-600">Reply</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More -->
+                <div class="p-4 text-center">
+                    <button class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+                        Load more comments (28 remaining)
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

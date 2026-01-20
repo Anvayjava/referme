@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post - ReferMe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function showPostType(type) {
+            document.getElementById('general-post').style.display = type === 'general' ? 'block' : 'none';
+            document.getElementById('referral-offer').style.display = type === 'offer' ? 'block' : 'none';
+            document.getElementById('referral-request').style.display = type === 'request' ? 'block' : 'none';
+
+            // Update active tab
+            document.querySelectorAll('[data-tab]').forEach(btn => {
+                btn.classList.remove('bg-blue-600', 'text-white');
+                btn.classList.add('text-gray-600', 'hover:bg-gray-100');
+            });
+            document.querySelector(`[data-tab="${type}"]`).classList.remove('text-gray-600', 'hover:bg-gray-100');
+            document.querySelector(`[data-tab="${type}"]`).classList.add('bg-blue-600', 'text-white');
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Top Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center space-x-8">
+                    <a href="home.html" class="text-2xl font-bold text-blue-600">ReferMe</a>
+                    <div class="hidden md:flex space-x-4">
+                        <a href="home.html" class="text-gray-600 hover:text-gray-900 px-3 py-2">Home</a>
+                        <a href="referrals.html" class="text-gray-600 hover:text-gray-900 px-3 py-2">Referrals</a>
+                        <a href="messages.html" class="text-gray-600 hover:text-gray-900 px-3 py-2 relative">
+                            Messages
+                            <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="profile.html" class="flex items-center space-x-2 hover:bg-gray-100 px-3 py-2 rounded-lg">
+                        <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold">
+                            JD
+                        </div>
+                        <span class="hidden md:block text-sm font-medium">John Doe</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-3xl mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="mb-6">
+            <a href="home.html" class="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4">
+                <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                Back
+            </a>
+            <h1 class="text-3xl font-bold text-gray-900">Create a Post</h1>
+            <p class="text-gray-600 mt-2">Share your thoughts, offer referrals, or request help from the community</p>
+        </div>
+
+        <!-- Post Type Selection -->
+        <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+            <h3 class="font-semibold text-gray-900 mb-3">What would you like to post?</h3>
+            <div class="grid grid-cols-3 gap-3">
+                <button onclick="showPostType('general')"
+                        data-tab="general"
+                        class="bg-blue-600 text-white px-4 py-3 rounded-lg font-semibold text-center">
+                    💬 General Post
+                </button>
+                <button onclick="showPostType('offer')"
+                        data-tab="offer"
+                        class="text-gray-600 hover:bg-gray-100 px-4 py-3 rounded-lg font-semibold text-center">
+                    🤝 Offer Referral
+                </button>
+                <button onclick="showPostType('request')"
+                        data-tab="request"
+                        class="text-gray-600 hover:bg-gray-100 px-4 py-3 rounded-lg font-semibold text-center">
+                    🙏 Request Referral
+                </button>
+            </div>
+        </div>
+
+        <!-- General Post Form -->
+        <div id="general-post" class="bg-white rounded-lg shadow-sm p-6">
+            <form action="home.html">
+                <div class="space-y-4">
+                    <!-- Bowl Selection -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Post to Bowl (Optional)</label>
+                        <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                            <option>All Community</option>
+                            <option>Microsoft</option>
+                            <option>Google</option>
+                            <option>Amazon</option>
+                            <option>Meta</option>
+                        </select>
+                    </div>
+
+                    <!-- Title -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Title</label>
+                        <input type="text"
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                               placeholder="What's on your mind?"
+                               required>
+                    </div>
+
+                    <!-- Content -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Content</label>
+                        <textarea rows="6"
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 resize-none"
+                                  placeholder="Share your thoughts, ask questions, or start a discussion..."
+                                  required></textarea>
+                        <p class="text-xs text-gray-500 mt-1">Be respectful and follow community guidelines</p>
+                    </div>
+
+                    <!-- Tags -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Tags (Optional)</label>
+                        <input type="text"
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                               placeholder="e.g., career, salary, culture (comma separated)">
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="flex justify-end space-x-3 pt-4 border-t">
+                        <button type="button"
+                                onclick="window.location.href='home.html'"
+                                class="px-6 py-2 border border-gray-300 rounded-lg font-semibold text-gray-700 hover:bg-gray-50">
+                            Cancel
+                        </button>
+                        <button type="submit"
+                                class="px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700">
+                            Post
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Referral Offer Form -->
+        <div id="referral-offer" class="bg-white rounded-lg shadow-sm p-6" style="display: none;">
+            <form action="home.html">
+                <div class="space-y-4">
+                    <!-- Job Title -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Job Title *</label>
+                        <input type="text"
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                               placeholder="e.g., Senior Software Engineer"
+                               required>
+                    </div>
+
+                    <!-- Company (Auto-filled from profile) -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Company</label>
+                        <input type="text"
+                               class="w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-lg"
+                               value="Microsoft"
+                               readonly>
+                        <p class="text-xs text-gray-500 mt-1">Based on your verified work email</p>
+                    </div>
+
+                    <!-- Team/Department -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Team/Department</label>
+                        <input type="text"
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                               placeholder="e.g., Azure Compute">
+                    </div>
+
+                    <!-- Location -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Location *</label>
+                        <input type="text"
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                               placeholder="e.g., Redmond, WA (Hybrid)"
+                               required>
+                    </div>
+
+                    <!-- Requirements -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Requirements *</label>
+                        <textarea rows="3"
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 resize-none"
+                                  placeholder="e.g., 5+ years of experience, Distributed systems, Cloud platforms"
+                                  required></textarea>
+                    </div>
+
+                    <!-- Description -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Job Description *</label>
+                        <textarea rows="5"
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 resize-none"
+                                  placeholder="Describe the role, team culture, and what makes this opportunity great..."
+                                  required></textarea>
+                    </div>
+
+                    <!-- Tags -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Tags</label>
+                        <input type="text"
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                               placeholder="e.g., swe, distributed-systems, cloud"
+                               value="referral, ">
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="flex justify-end space-x-3 pt-4 border-t">
+                        <button type="button"
+                                onclick="window.location.href='home.html'"
+                                class="px-6 py-2 border border-gray-300 rounded-lg font-semibold text-gray-700 hover:bg-gray-50">
+                            Cancel
+                        </button>
+                        <button type="submit"
+                                class="px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700">
+                            Post Referral Offer
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Referral Request Form -->
+        <div id="referral-request" class="bg-white rounded-lg shadow-sm p-6" style="display: none;">
+            <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-4">
+                <p class="text-sm text-yellow-800">
+                    <strong>💡 Tip:</strong> Be specific about your background and what you're looking for. The more details you provide, the better matches you'll get!
+                </p>
+            </div>
+
+            <form action="home.html">
+                <div class="space-y-4">
+                    <!-- Title -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Title *</label>
+                        <input type="text"
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                               placeholder="e.g., Looking for PM referrals at Meta/Google"
+                               required>
+                    </div>
+
+                    <!-- Target Companies -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Target Companies *</label>
+                        <input type="text"
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                               placeholder="e.g., Meta, Google, Amazon"
+                               required>
+                    </div>
+
+                    <!-- Target Role -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Target Role *</label>
+                        <input type="text"
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                               placeholder="e.g., Product Manager (L5/L6)"
+                               required>
+                    </div>
+
+                    <!-- Years of Experience -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Years of Experience *</label>
+                        <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" required>
+                            <option value="">Select...</option>
+                            <option>0-2 years</option>
+                            <option>3-5 years</option>
+                            <option>6-10 years</option>
+                            <option>10+ years</option>
+                        </select>
+                    </div>
+
+                    <!-- Background & Skills -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Your Background & Skills *</label>
+                        <textarea rows="5"
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 resize-none"
+                                  placeholder="Describe your experience, key achievements, skills, and what makes you a strong candidate..."
+                                  required></textarea>
+                    </div>
+
+                    <!-- Education (Optional) -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Education (Optional)</label>
+                        <input type="text"
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                               placeholder="e.g., MS in Computer Science, Stanford University">
+                    </div>
+
+                    <!-- Tags -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Tags</label>
+                        <input type="text"
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                               placeholder="e.g., pm, product-management, b2b"
+                               value="seeking-referral, ">
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="flex justify-end space-x-3 pt-4 border-t">
+                        <button type="button"
+                                onclick="window.location.href='home.html'"
+                                class="px-6 py-2 border border-gray-300 rounded-lg font-semibold text-gray-700 hover:bg-gray-50">
+                            Cancel
+                        </button>
+                        <button type="submit"
+                                class="px-6 py-2 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700">
+                            Post Referral Request
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

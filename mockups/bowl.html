@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Bowl - ReferMe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Top Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center space-x-8">
+                    <a href="home.html" class="text-2xl font-bold text-blue-600">ReferMe</a>
+                    <div class="hidden md:flex space-x-4">
+                        <a href="home.html" class="text-gray-600 hover:text-gray-900 px-3 py-2">Home</a>
+                        <a href="referrals.html" class="text-gray-600 hover:text-gray-900 px-3 py-2">Referrals</a>
+                        <a href="messages.html" class="text-gray-600 hover:text-gray-900 px-3 py-2 relative">
+                            Messages
+                            <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button onclick="window.location.href='create-post.html'" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 font-semibold">
+                        + New Post
+                    </button>
+                    <a href="profile.html" class="flex items-center space-x-2 hover:bg-gray-100 px-3 py-2 rounded-lg">
+                        <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold">
+                            JD
+                        </div>
+                        <span class="hidden md:block text-sm font-medium">John Doe</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Company Bowl Header -->
+    <div class="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+        <div class="max-w-7xl mx-auto px-4 py-8">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center">
+                        <span class="text-3xl font-bold text-blue-600">MS</span>
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-bold">Microsoft</h1>
+                        <p class="text-blue-100 mt-1">1,234 verified employees • 456 posts this week</p>
+                    </div>
+                </div>
+                <button class="bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50">
+                    Following
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 py-6">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            <!-- Left Sidebar - Filters & Info -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-lg shadow-sm p-4 sticky top-20">
+                    <h3 class="font-semibold text-gray-900 mb-3">Filter Posts</h3>
+                    <div class="space-y-2">
+                        <button class="w-full text-left px-3 py-2 rounded-lg bg-blue-50 text-blue-700 font-medium">
+                            All Posts
+                        </button>
+                        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-gray-50 text-gray-700">
+                            Referrals
+                        </button>
+                        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-gray-50 text-gray-700">
+                            Career
+                        </button>
+                        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-gray-50 text-gray-700">
+                            Salary
+                        </button>
+                        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-gray-50 text-gray-700">
+                            Culture
+                        </button>
+                        <button class="w-full text-left px-3 py-2 rounded-lg hover:bg-gray-50 text-gray-700">
+                            Interviews
+                        </button>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <h3 class="font-semibold text-gray-900 mb-3">About</h3>
+                    <p class="text-sm text-gray-600">Official bowl for Microsoft employees to discuss company culture, career growth, and help each other with referrals.</p>
+                </div>
+            </div>
+
+            <!-- Main Content - Posts -->
+            <div class="lg:col-span-2 space-y-4">
+                <!-- Pinned Post -->
+                <div class="bg-white rounded-lg shadow-sm border-l-4 border-yellow-500">
+                    <div class="p-4">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L11 4.323V3a1 1 0 011-1h-2zM2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM9 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1h-2a1 1 0 01-1-1v-5z"></path>
+                            </svg>
+                            <span class="text-sm font-semibold text-yellow-700">PINNED POST</span>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Welcome to the Microsoft Bowl!</h3>
+                        <p class="text-gray-700 text-sm">This is a space for Microsoft employees to connect, share insights, and help each other grow. Please be respectful and follow our community guidelines.</p>
+                    </div>
+                </div>
+
+                <!-- Regular Posts -->
+                <div class="bg-white rounded-lg shadow-sm">
+                    <div class="p-4">
+                        <div class="flex items-start justify-between mb-3">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white font-semibold">
+                                    SA
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Sarah Anderson</div>
+                                    <div class="text-sm text-gray-500">
+                                        <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded text-xs font-medium">Microsoft</span>
+                                        <span class="mx-1">•</span>
+                                        <span>Senior SWE</span>
+                                        <span class="mx-1">•</span>
+                                        <span>2h ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="post.html">
+                            <h3 class="font-semibold text-gray-900 mb-2 hover:text-blue-600">Azure team is hiring! Happy to refer qualified candidates</h3>
+                            <p class="text-gray-700 mb-3">We're hiring Senior Software Engineers for the Azure Compute team. Looking for candidates with 5+ years of experience in distributed systems and cloud infrastructure. If interested, comment below or DM me your resume!</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">#referral</span>
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">#azure</span>
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">#swe</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="border-t border-gray-100 px-4 py-2 flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <button class="flex items-center space-x-1 text-gray-600 hover:text-blue-600">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+                                </svg>
+                                <span class="text-sm font-medium">124</span>
+                            </button>
+                            <button class="flex items-center space-x-1 text-gray-600 hover:text-blue-600">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                </svg>
+                                <span class="text-sm font-medium">32</span>
+                            </button>
+                        </div>
+                        <button class="text-gray-600 hover:text-blue-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm">
+                    <div class="p-4">
+                        <div class="flex items-start justify-between mb-3">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center text-white font-semibold">
+                                    DL
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">David Lee</div>
+                                    <div class="text-sm text-gray-500">
+                                        <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded text-xs font-medium">Microsoft</span>
+                                        <span class="mx-1">•</span>
+                                        <span>Principal Engineer</span>
+                                        <span class="mx-1">•</span>
+                                        <span>4h ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="post.html">
+                            <h3 class="font-semibold text-gray-900 mb-2 hover:text-blue-600">Thoughts on the new hybrid work policy?</h3>
+                            <p class="text-gray-700 mb-3">Now that the 3 days in office mandate is rolling out, what's everyone's take? My team is pretty flexible but curious how other orgs are handling it. Anyone else finding the commute challenging?</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">#culture</span>
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">#wfh</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="border-t border-gray-100 px-4 py-2 flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <button class="flex items-center space-x-1 text-blue-600">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M5 15l7-7 7 7"></path>
+                                </svg>
+                                <span class="text-sm font-medium">67</span>
+                            </button>
+                            <button class="flex items-center space-x-1 text-gray-600 hover:text-blue-600">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                </svg>
+                                <span class="text-sm font-medium">89</span>
+                            </button>
+                        </div>
+                        <button class="text-gray-600 hover:text-blue-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm">
+                    <div class="p-4">
+                        <div class="flex items-start justify-between mb-3">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center text-white font-semibold">
+                                    EM
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Emily Martinez</div>
+                                    <div class="text-sm text-gray-500">
+                                        <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded text-xs font-medium">Microsoft</span>
+                                        <span class="mx-1">•</span>
+                                        <span>L64 SDE</span>
+                                        <span class="mx-1">•</span>
+                                        <span>1d ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="post.html">
+                            <h3 class="font-semibold text-gray-900 mb-2 hover:text-blue-600">Just got promoted to L64! Here's my advice</h3>
+                            <p class="text-gray-700 mb-3">After 3 years at L63, finally made it to L64. Happy to share what worked for me: 1) Scope expansion beyond your immediate team 2) Clear communication with your manager about promotion goals 3) Building relationships across orgs. AMA!</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">#career</span>
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">#promotion</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="border-t border-gray-100 px-4 py-2 flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <button class="flex items-center space-x-1 text-gray-600 hover:text-blue-600">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+                                </svg>
+                                <span class="text-sm font-medium">203</span>
+                            </button>
+                            <button class="flex items-center space-x-1 text-gray-600 hover:text-blue-600">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                </svg>
+                                <span class="text-sm font-medium">45</span>
+                            </button>
+                        </div>
+                        <button class="text-gray-600 hover:text-blue-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar - Top Contributors in Bowl -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-lg shadow-sm p-4 sticky top-20">
+                    <h3 class="font-semibold text-gray-900 mb-3">Top Contributors</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-white text-sm font-semibold">
+                                    TR
+                                </div>
+                                <div>
+                                    <div class="text-sm font-medium">Tom R.</div>
+                                    <div class="text-xs text-gray-500">Principal Eng</div>
+                                </div>
+                            </div>
+                            <span class="text-xs text-gray-500">540 pts</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-8 h-8 bg-teal-600 rounded-full flex items-center justify-center text-white text-sm font-semibold">
+                                    LK
+                                </div>
+                                <div>
+                                    <div class="text-sm font-medium">Lisa K.</div>
+                                    <div class="text-xs text-gray-500">Sr PM</div>
+                                </div>
+                            </div>
+                            <span class="text-xs text-gray-500">412 pts</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center text-white text-sm font-semibold">
+                                    AS
+                                </div>
+                                <div>
+                                    <div class="text-sm font-medium">Alex S.</div>
+                                    <div class="text-xs text-gray-500">Staff SWE</div>
+                                </div>
+                            </div>
+                            <span class="text-xs text-gray-500">389 pts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 rounded-lg p-4 mt-4">
+                    <h4 class="font-semibold text-blue-900 mb-2 text-sm">Post in this bowl</h4>
+                    <p class="text-xs text-blue-800 mb-3">Share insights, ask questions, or offer referrals!</p>
+                    <button onclick="window.location.href='create-post.html'" class="w-full bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-700">
+                        Create Post
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

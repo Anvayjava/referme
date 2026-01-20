@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - ReferMe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Top Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center space-x-8">
+                    <a href="home.html" class="text-2xl font-bold text-blue-600">ReferMe</a>
+                    <div class="hidden md:flex space-x-4">
+                        <a href="home.html" class="text-gray-600 hover:text-gray-900 px-3 py-2">Home</a>
+                        <a href="referrals.html" class="text-gray-600 hover:text-gray-900 px-3 py-2">Referrals</a>
+                        <a href="messages.html" class="text-gray-900 font-semibold px-3 py-2 border-b-2 border-blue-600">
+                            Messages
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button onclick="window.location.href='create-post.html'" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 font-semibold">
+                        + New Post
+                    </button>
+                    <a href="profile.html" class="flex items-center space-x-2 hover:bg-gray-100 px-3 py-2 rounded-lg">
+                        <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold">
+                            JD
+                        </div>
+                        <span class="hidden md:block text-sm font-medium">John Doe</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Messages Layout -->
+    <div class="max-w-7xl mx-auto px-4 py-6">
+        <div class="bg-white rounded-lg shadow-sm overflow-hidden" style="height: calc(100vh - 140px);">
+            <div class="grid grid-cols-12 h-full">
+                <!-- Left Sidebar - Conversations List -->
+                <div class="col-span-4 border-r border-gray-200 flex flex-col">
+                    <!-- Search -->
+                    <div class="p-4 border-b">
+                        <div class="flex items-center justify-between mb-3">
+                            <h2 class="text-xl font-bold text-gray-900">Messages</h2>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full font-semibold">7/10 DMs left</span>
+                        </div>
+                        <input type="text"
+                               placeholder="Search conversations..."
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+
+                    <!-- Conversations -->
+                    <div class="flex-1 overflow-y-auto">
+                        <!-- Active Conversation -->
+                        <div class="bg-blue-50 border-l-4 border-blue-600 p-4 cursor-pointer hover:bg-blue-100">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-semibold flex-shrink-0">
+                                    SA
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <div class="flex items-center space-x-2">
+                                            <span class="font-semibold text-gray-900">Sarah Anderson</span>
+                                            <span class="bg-blue-600 text-white px-2 py-0.5 rounded text-xs">Microsoft</span>
+                                        </div>
+                                        <span class="text-xs text-gray-500">2m</span>
+                                    </div>
+                                    <p class="text-sm text-gray-700 truncate">Great! I'll review your resume and get back to you...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Other Conversations -->
+                        <div class="p-4 cursor-pointer hover:bg-gray-50 border-b">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-semibold flex-shrink-0">
+                                    MK
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <div class="flex items-center space-x-2">
+                                            <span class="font-semibold text-gray-900">Michael Kim</span>
+                                            <span class="bg-red-600 text-white px-2 py-0.5 rounded text-xs">Google</span>
+                                        </div>
+                                        <span class="text-xs text-gray-500">1h</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600 truncate">Thanks for reaching out! What level are you targeting?</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-4 cursor-pointer hover:bg-gray-50 border-b">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-12 h-12 bg-teal-600 rounded-full flex items-center justify-center text-white font-semibold flex-shrink-0">
+                                    JS
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <div class="flex items-center space-x-2">
+                                            <span class="font-semibold text-gray-900">Jessica Smith</span>
+                                            <span class="bg-purple-600 text-white px-2 py-0.5 rounded text-xs">Meta</span>
+                                        </div>
+                                        <span class="text-xs text-gray-500">3h</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600 truncate">Sounds like a great fit! Can you send me your resume?</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-4 cursor-pointer hover:bg-gray-50 border-b">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center text-white font-semibold flex-shrink-0">
+                                    PG
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <div class="flex items-center space-x-2">
+                                            <span class="font-semibold text-gray-900">Priya Gupta</span>
+                                        </div>
+                                        <span class="text-xs text-gray-500">1d</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600 truncate">Thank you so much for the referral help!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-4 cursor-pointer hover:bg-gray-50 border-b">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center text-white font-semibold flex-shrink-0">
+                                    DL
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <div class="flex items-center space-x-2">
+                                            <span class="font-semibold text-gray-900">David Lee</span>
+                                            <span class="bg-blue-600 text-white px-2 py-0.5 rounded text-xs">Microsoft</span>
+                                        </div>
+                                        <span class="text-xs text-gray-500">2d</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600 truncate">Hey! I saw your post about Azure roles...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side - Active Conversation -->
+                <div class="col-span-8 flex flex-col">
+                    <!-- Conversation Header -->
+                    <div class="p-4 border-b flex items-center justify-between">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white font-semibold">
+                                SA
+                            </div>
+                            <div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="font-semibold text-gray-900">Sarah Anderson</span>
+                                    <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded text-xs font-medium">Microsoft</span>
+                                </div>
+                                <div class="text-sm text-gray-500">Senior SWE • Active now</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <button class="text-gray-400 hover:text-gray-600 p-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Messages -->
+                    <div class="flex-1 overflow-y-auto p-4 space-y-4">
+                        <!-- Date Divider -->
+                        <div class="flex items-center justify-center">
+                            <span class="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Today</span>
+                        </div>
+
+                        <!-- Their Message -->
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white font-semibold text-sm flex-shrink-0">
+                                SA
+                            </div>
+                            <div class="flex-1">
+                                <div class="bg-gray-100 rounded-lg p-3 max-w-md">
+                                    <p class="text-gray-900">Hi! I saw your comment on my post about Azure roles. I'd be happy to help with a referral!</p>
+                                </div>
+                                <span class="text-xs text-gray-500 mt-1 block">10:32 AM</span>
+                            </div>
+                        </div>
+
+                        <!-- My Message -->
+                        <div class="flex items-end justify-end space-x-3">
+                            <div class="flex-1 flex justify-end">
+                                <div class="bg-blue-600 rounded-lg p-3 max-w-md">
+                                    <p class="text-white">Thanks so much! I really appreciate it. I have 6 years of experience working with distributed systems at my current company.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-end">
+                            <span class="text-xs text-gray-500">10:33 AM</span>
+                        </div>
+
+                        <!-- My Message -->
+                        <div class="flex items-end justify-end space-x-3">
+                            <div class="flex-1 flex justify-end">
+                                <div class="bg-blue-600 rounded-lg p-3 max-w-md">
+                                    <p class="text-white">Would it be okay if I send you my resume?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-end">
+                            <span class="text-xs text-gray-500">10:33 AM</span>
+                        </div>
+
+                        <!-- Their Message -->
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white font-semibold text-sm flex-shrink-0">
+                                SA
+                            </div>
+                            <div class="flex-1">
+                                <div class="bg-gray-100 rounded-lg p-3 max-w-md">
+                                    <p class="text-gray-900">Of course! Please send it over. Also, let me know what specific team or role you're most interested in so I can provide more context in the referral.</p>
+                                </div>
+                                <span class="text-xs text-gray-500 mt-1 block">10:35 AM</span>
+                            </div>
+                        </div>
+
+                        <!-- My Message with Attachment -->
+                        <div class="flex items-end justify-end space-x-3">
+                            <div class="flex-1 flex justify-end">
+                                <div class="space-y-2 max-w-md">
+                                    <div class="bg-blue-600 rounded-lg p-3">
+                                        <p class="text-white">I'm most interested in the Azure Compute team. Here's my resume:</p>
+                                    </div>
+                                    <div class="bg-white border-2 border-blue-600 rounded-lg p-3 flex items-center space-x-3">
+                                        <div class="w-10 h-10 bg-blue-100 rounded flex items-center justify-center">
+                                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="text-sm font-semibold text-gray-900">John_Doe_Resume.pdf</div>
+                                            <div class="text-xs text-gray-500">245 KB</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-end">
+                            <span class="text-xs text-gray-500">10:38 AM</span>
+                        </div>
+
+                        <!-- Their Message -->
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white font-semibold text-sm flex-shrink-0">
+                                SA
+                            </div>
+                            <div class="flex-1">
+                                <div class="bg-gray-100 rounded-lg p-3 max-w-md">
+                                    <p class="text-gray-900">Great! I'll review your resume and get back to you within the next day or two. Your experience looks promising from what you've described!</p>
+                                </div>
+                                <span class="text-xs text-gray-500 mt-1 block">Just now</span>
+                            </div>
+                        </div>
+
+                        <!-- Typing Indicator -->
+                        <div class="flex items-start space-x-3">
+                            <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white font-semibold text-sm flex-shrink-0">
+                                SA
+                            </div>
+                            <div class="bg-gray-100 rounded-lg p-3">
+                                <div class="flex space-x-1">
+                                    <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                                    <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.1s"></div>
+                                    <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Message Input -->
+                    <div class="p-4 border-t">
+                        <div class="flex items-end space-x-3">
+                            <button class="text-gray-400 hover:text-gray-600 p-2">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"></path>
+                                </svg>
+                            </button>
+                            <div class="flex-1">
+                                <textarea
+                                    rows="1"
+                                    placeholder="Type a message..."
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"></textarea>
+                            </div>
+                            <button class="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-2">You have 7 DMs remaining this month. <a href="#" class="text-blue-600 hover:underline">Learn more</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

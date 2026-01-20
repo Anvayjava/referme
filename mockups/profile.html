@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - ReferMe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Top Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center space-x-8">
+                    <a href="home.html" class="text-2xl font-bold text-blue-600">ReferMe</a>
+                    <div class="hidden md:flex space-x-4">
+                        <a href="home.html" class="text-gray-600 hover:text-gray-900 px-3 py-2">Home</a>
+                        <a href="referrals.html" class="text-gray-600 hover:text-gray-900 px-3 py-2">Referrals</a>
+                        <a href="messages.html" class="text-gray-600 hover:text-gray-900 px-3 py-2 relative">
+                            Messages
+                            <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button onclick="window.location.href='create-post.html'" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 font-semibold">
+                        + New Post
+                    </button>
+                    <a href="profile.html" class="flex items-center space-x-2 bg-gray-100 px-3 py-2 rounded-lg">
+                        <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold">
+                            JD
+                        </div>
+                        <span class="hidden md:block text-sm font-medium">John Doe</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Header -->
+    <div class="bg-gradient-to-r from-blue-600 to-blue-700">
+        <div class="max-w-5xl mx-auto px-4 py-8">
+            <div class="flex items-start justify-between">
+                <div class="flex items-start space-x-6">
+                    <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center">
+                        <span class="text-4xl font-bold text-blue-600">JD</span>
+                    </div>
+                    <div class="text-white">
+                        <h1 class="text-3xl font-bold mb-2">John Doe</h1>
+                        <p class="text-blue-100 mb-3">
+                            <span class="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">Microsoft</span>
+                            <span class="mx-2">•</span>
+                            <span>Senior Software Engineer</span>
+                        </p>
+                        <div class="flex items-center space-x-4 text-sm">
+                            <span class="flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                Seattle, WA
+                            </span>
+                            <span class="flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                                Joined Jan 2024
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <button class="bg-white text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-50">
+                    Edit Profile
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-4 py-6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Left Column - Stats & Badges -->
+            <div class="lg:col-span-1 space-y-6">
+                <!-- Stats Card -->
+                <div class="bg-white rounded-lg shadow-sm p-5">
+                    <h3 class="font-semibold text-gray-900 mb-4">Profile Stats</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600">Karma Points</span>
+                            </div>
+                            <span class="font-bold text-blue-600">450</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600">Referrals Given</span>
+                            </div>
+                            <span class="font-bold text-gray-900">3</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"></path>
+                                        <path d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600">Posts Created</span>
+                            </div>
+                            <span class="font-bold text-gray-900">12</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-sm text-gray-600">DMs Remaining</span>
+                            </div>
+                            <span class="font-bold text-gray-900">7/10</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Badges Card -->
+                <div class="bg-white rounded-lg shadow-sm p-5">
+                    <h3 class="font-semibold text-gray-900 mb-4">Badges</h3>
+                    <div class="grid grid-cols-3 gap-3">
+                        <div class="flex flex-col items-center p-3 bg-yellow-50 rounded-lg">
+                            <div class="text-3xl mb-1">🏆</div>
+                            <span class="text-xs text-center text-gray-600">Top Contributor</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 bg-blue-50 rounded-lg">
+                            <div class="text-3xl mb-1">✓</div>
+                            <span class="text-xs text-center text-gray-600">Verified Email</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 bg-green-50 rounded-lg">
+                            <div class="text-3xl mb-1">🤝</div>
+                            <span class="text-xs text-center text-gray-600">Helpful</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 bg-purple-50 rounded-lg">
+                            <div class="text-3xl mb-1">💼</div>
+                            <span class="text-xs text-center text-gray-600">LinkedIn Connected</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 bg-pink-50 rounded-lg">
+                            <div class="text-3xl mb-1">🎯</div>
+                            <span class="text-xs text-center text-gray-600">Referral Pro</span>
+                        </div>
+                        <div class="flex flex-col items-center p-3 bg-gray-50 rounded-lg opacity-50">
+                            <div class="text-3xl mb-1">🔒</div>
+                            <span class="text-xs text-center text-gray-600">Locked</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LinkedIn Connection -->
+                <div class="bg-blue-50 rounded-lg p-4 border border-blue-200">
+                    <div class="flex items-center justify-between mb-2">
+                        <h4 class="font-semibold text-blue-900 text-sm">LinkedIn Profile</h4>
+                        <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded-full">Connected</span>
+                    </div>
+                    <p class="text-xs text-blue-800 mb-3">Your LinkedIn profile is connected and visible to others.</p>
+                    <button class="w-full bg-white text-blue-600 px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-100 border border-blue-300">
+                        View LinkedIn Profile
+                    </button>
+                </div>
+
+                <!-- Leaderboard Position -->
+                <div class="bg-white rounded-lg shadow-sm p-5">
+                    <h3 class="font-semibold text-gray-900 mb-3">Leaderboard</h3>
+                    <div class="text-center py-4">
+                        <div class="text-4xl font-bold text-blue-600 mb-1">#24</div>
+                        <div class="text-sm text-gray-600">Global Ranking</div>
+                        <div class="text-xs text-gray-500 mt-1">Top 5% of users</div>
+                    </div>
+                    <button class="w-full bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 mt-3">
+                        View Full Leaderboard
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Column - Activity & Posts -->
+            <div class="lg:col-span-2 space-y-6">
+                <!-- About Section -->
+                <div class="bg-white rounded-lg shadow-sm p-5">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="font-semibold text-gray-900">About</h3>
+                        <button class="text-blue-600 hover:text-blue-700 text-sm">Edit</button>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Senior Software Engineer at Microsoft with 8 years of experience in distributed systems and cloud infrastructure.
+                        Passionate about helping others break into tech and happy to provide referrals for qualified candidates.
+                    </p>
+                    <div class="mt-4">
+                        <h4 class="text-sm font-semibold text-gray-900 mb-2">Skills</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Distributed Systems</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Cloud Computing</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Azure</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">C#</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Referral Status -->
+                <div class="bg-white rounded-lg shadow-sm p-5">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="font-semibold text-gray-900">Referral Availability</h3>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" class="sr-only peer" checked>
+                            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                        </label>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-3">You're currently available to provide referrals. Set criteria below:</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700">Software Engineering roles</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700">5+ years of experience</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700">Distributed systems experience</span>
+                        </div>
+                    </div>
+                    <button class="mt-3 text-blue-600 hover:text-blue-700 text-sm font-medium">
+                        Edit Criteria
+                    </button>
+                </div>
+
+                <!-- Recent Activity Tabs -->
+                <div class="bg-white rounded-lg shadow-sm">
+                    <div class="border-b px-5 pt-5">
+                        <div class="flex space-x-6">
+                            <button class="pb-3 border-b-2 border-blue-600 text-blue-600 font-semibold">
+                                My Posts (12)
+                            </button>
+                            <button class="pb-3 text-gray-600 hover:text-gray-900">
+                                Comments (48)
+                            </button>
+                            <button class="pb-3 text-gray-600 hover:text-gray-900">
+                                Upvoted (89)
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Posts List -->
+                    <div class="divide-y">
+                        <div class="p-5 hover:bg-gray-50 cursor-pointer">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold text-gray-900">Looking to refer qualified candidates for Azure team!</h4>
+                                <span class="text-xs text-gray-500">2h ago</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">We're hiring Senior Software Engineers for the Azure Compute team...</p>
+                            <div class="flex items-center space-x-4 text-xs text-gray-500">
+                                <span class="flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+                                    </svg>
+                                    124
+                                </span>
+                                <span class="flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                    </svg>
+                                    32
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="p-5 hover:bg-gray-50 cursor-pointer">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold text-gray-900">Thoughts on Microsoft's hybrid work policy</h4>
+                                <span class="text-xs text-gray-500">1d ago</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">What's everyone's experience with the 3 days in office mandate?...</p>
+                            <div class="flex items-center space-x-4 text-xs text-gray-500">
+                                <span class="flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+                                    </svg>
+                                    67
+                                </span>
+                                <span class="flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                    </svg>
+                                    89
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="p-5 hover:bg-gray-50 cursor-pointer">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold text-gray-900">How I prepared for L64 promotion</h4>
+                                <span class="text-xs text-gray-500">3d ago</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">Sharing my journey from L63 to L64. Here's what worked for me...</p>
+                            <div class="flex items-center space-x-4 text-xs text-gray-500">
+                                <span class="flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+                                    </svg>
+                                    203
+                                </span>
+                                <span class="flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                    </svg>
+                                    45
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

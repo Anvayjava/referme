@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - ReferMe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Top Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center space-x-8">
+                    <a href="home.html" class="text-2xl font-bold text-blue-600">ReferMe</a>
+                    <div class="hidden md:flex space-x-4">
+                        <a href="home.html" class="text-gray-900 font-semibold px-3 py-2 border-b-2 border-blue-600">Home</a>
+                        <a href="referrals.html" class="text-gray-600 hover:text-gray-900 px-3 py-2">Referrals</a>
+                        <a href="messages.html" class="text-gray-600 hover:text-gray-900 px-3 py-2 relative">
+                            Messages
+                            <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button onclick="window.location.href='create-post.html'" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 font-semibold">
+                        + New Post
+                    </button>
+                    <a href="profile.html" class="flex items-center space-x-2 hover:bg-gray-100 px-3 py-2 rounded-lg">
+                        <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold">
+                            JD
+                        </div>
+                        <span class="hidden md:block text-sm font-medium">John Doe</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-4 py-6">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            <!-- Left Sidebar - Company Bowls -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-lg shadow-sm p-4 sticky top-20">
+                    <h3 class="font-semibold text-gray-900 mb-3">Company Bowls</h3>
+                    <div class="space-y-2">
+                        <a href="bowl.html" class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-8 h-8 bg-blue-100 rounded flex items-center justify-center text-blue-600 font-semibold text-sm">
+                                    MS
+                                </div>
+                                <span class="text-sm">Microsoft</span>
+                            </div>
+                            <span class="text-xs text-gray-500">1.2k</span>
+                        </a>
+                        <a href="bowl.html" class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-8 h-8 bg-red-100 rounded flex items-center justify-center text-red-600 font-semibold text-sm">
+                                    G
+                                </div>
+                                <span class="text-sm">Google</span>
+                            </div>
+                            <span class="text-xs text-gray-500">2.5k</span>
+                        </a>
+                        <a href="bowl.html" class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-8 h-8 bg-orange-100 rounded flex items-center justify-center text-orange-600 font-semibold text-sm">
+                                    A
+                                </div>
+                                <span class="text-sm">Amazon</span>
+                            </div>
+                            <span class="text-xs text-gray-500">980</span>
+                        </a>
+                        <a href="bowl.html" class="flex items-center justify-between p-2 hover:bg-gray-50 rounded-lg">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-8 h-8 bg-purple-100 rounded flex items-center justify-center text-purple-600 font-semibold text-sm">
+                                    M
+                                </div>
+                                <span class="text-sm">Meta</span>
+                            </div>
+                            <span class="text-xs text-gray-500">1.8k</span>
+                        </a>
+                        <a href="#" class="block text-sm text-blue-600 hover:underline mt-3">View all companies →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Feed -->
+            <div class="lg:col-span-2 space-y-4">
+                <!-- Post 1 -->
+                <div class="bg-white rounded-lg shadow-sm">
+                    <div class="p-4">
+                        <div class="flex items-start justify-between mb-3">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white font-semibold">
+                                    SA
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Sarah Anderson</div>
+                                    <div class="text-sm text-gray-500">
+                                        <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded text-xs font-medium">Microsoft</span>
+                                        <span class="mx-1">•</span>
+                                        <span>Senior SWE</span>
+                                        <span class="mx-1">•</span>
+                                        <span>2h ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="text-gray-400 hover:text-gray-600">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <a href="post.html">
+                            <h3 class="font-semibold text-gray-900 mb-2 hover:text-blue-600">Looking to refer qualified candidates for Azure team!</h3>
+                            <p class="text-gray-700 mb-3">We're hiring Senior Software Engineers for the Azure Compute team. If you have 5+ years of experience with distributed systems and cloud infrastructure, I'd be happy to refer you. Drop a comment or DM me your resume!</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">#referral</span>
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">#azure</span>
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">#swe</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="border-t border-gray-100 px-4 py-2 flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <button class="flex items-center space-x-1 text-gray-600 hover:text-blue-600">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+                                </svg>
+                                <span class="text-sm font-medium">124</span>
+                            </button>
+                            <button class="flex items-center space-x-1 text-gray-600 hover:text-blue-600">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                </svg>
+                                <span class="text-sm font-medium">32</span>
+                            </button>
+                        </div>
+                        <button class="text-gray-600 hover:text-blue-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Post 2 -->
+                <div class="bg-white rounded-lg shadow-sm">
+                    <div class="p-4">
+                        <div class="flex items-start justify-between mb-3">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-semibold">
+                                    MK
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Michael Kim</div>
+                                    <div class="text-sm text-gray-500">
+                                        <span class="bg-red-100 text-red-800 px-2 py-0.5 rounded text-xs font-medium">Google</span>
+                                        <span class="mx-1">•</span>
+                                        <span>Staff Engineer</span>
+                                        <span class="mx-1">•</span>
+                                        <span>5h ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="text-gray-400 hover:text-gray-600">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <a href="post.html">
+                            <h3 class="font-semibold text-gray-900 mb-2 hover:text-blue-600">What's the typical timeline for E5 to E6 promotion at Google?</h3>
+                            <p class="text-gray-700 mb-3">I've been at E5 for 2 years now, consistently getting EE ratings. My manager says I'm on track but I'm curious what the typical timeline looks like for others. Any insights?</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">#career</span>
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">#promotion</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="border-t border-gray-100 px-4 py-2 flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <button class="flex items-center space-x-1 text-blue-600">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M5 15l7-7 7 7"></path>
+                                </svg>
+                                <span class="text-sm font-medium">89</span>
+                            </button>
+                            <button class="flex items-center space-x-1 text-gray-600 hover:text-blue-600">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                </svg>
+                                <span class="text-sm font-medium">56</span>
+                            </button>
+                        </div>
+                        <button class="text-gray-600 hover:text-blue-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Post 3 - Job Seeker Looking for Referral -->
+                <div class="bg-white rounded-lg shadow-sm border-l-4 border-green-500">
+                    <div class="p-4">
+                        <div class="flex items-start justify-between mb-3">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center text-white font-semibold">
+                                    PG
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Priya Gupta</div>
+                                    <div class="text-sm text-gray-500">
+                                        <span class="bg-green-100 text-green-800 px-2 py-0.5 rounded text-xs font-medium">SEEKING REFERRAL</span>
+                                        <span class="mx-1">•</span>
+                                        <span>1d ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="text-gray-400 hover:text-gray-600">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <a href="post.html">
+                            <h3 class="font-semibold text-gray-900 mb-2 hover:text-blue-600">Looking for PM referrals at Meta/Google - 6 YOE in B2B SaaS</h3>
+                            <p class="text-gray-700 mb-3">I'm a Senior PM with 6 years of experience in B2B SaaS products. Led multiple 0-1 features that drove 40% revenue growth. Currently looking for PM roles (L5/L6 equivalent) at Meta or Google. Would really appreciate a referral!</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">#seeking-referral</span>
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">#pm</span>
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">#meta</span>
+                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">#google</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="border-t border-gray-100 px-4 py-2 flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <button class="flex items-center space-x-1 text-gray-600 hover:text-blue-600">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+                                </svg>
+                                <span class="text-sm font-medium">45</span>
+                            </button>
+                            <button class="flex items-center space-x-1 text-gray-600 hover:text-blue-600">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                </svg>
+                                <span class="text-sm font-medium">18</span>
+                            </button>
+                        </div>
+                        <button class="bg-blue-600 text-white px-4 py-1.5 rounded-lg text-sm font-medium hover:bg-blue-700">
+                            Send DM
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="lg:col-span-1 space-y-4">
+                <!-- User Stats -->
+                <div class="bg-white rounded-lg shadow-sm p-4">
+                    <h3 class="font-semibold text-gray-900 mb-3">Your Stats</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-600">Karma Points</span>
+                            <span class="font-semibold text-blue-600">450</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-600">DMs Remaining</span>
+                            <span class="font-semibold text-gray-900">7/10</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-600">Referrals Given</span>
+                            <span class="font-semibold text-gray-900">3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leaderboard Preview -->
+                <div class="bg-white rounded-lg shadow-sm p-4">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="font-semibold text-gray-900">Top Contributors</h3>
+                        <a href="#" class="text-xs text-blue-600 hover:underline">View all</a>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-yellow-500 font-bold">1.</span>
+                                <div class="w-6 h-6 bg-indigo-600 rounded-full flex items-center justify-center text-white text-xs font-semibold">
+                                    AB
+                                </div>
+                                <span class="text-sm">Alice B.</span>
+                            </div>
+                            <span class="text-xs text-gray-500">1.2k</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-gray-400 font-bold">2.</span>
+                                <div class="w-6 h-6 bg-pink-600 rounded-full flex items-center justify-center text-white text-xs font-semibold">
+                                    RC
+                                </div>
+                                <span class="text-sm">Ryan C.</span>
+                            </div>
+                            <span class="text-xs text-gray-500">980</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-orange-400 font-bold">3.</span>
+                                <div class="w-6 h-6 bg-teal-600 rounded-full flex items-center justify-center text-white text-xs font-semibold">
+                                    SK
+                                </div>
+                                <span class="text-sm">Sarah K.</span>
+                            </div>
+                            <span class="text-xs text-gray-500">875</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="bg-blue-50 rounded-lg p-4">
+                    <h4 class="font-semibold text-blue-900 mb-2 text-sm">Connect LinkedIn</h4>
+                    <p class="text-xs text-blue-800 mb-3">Get +50 bonus points and enhance your profile!</p>
+                    <button class="w-full bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-700">
+                        Connect Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

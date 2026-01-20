@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referral Board - ReferMe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Top Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center space-x-8">
+                    <a href="home.html" class="text-2xl font-bold text-blue-600">ReferMe</a>
+                    <div class="hidden md:flex space-x-4">
+                        <a href="home.html" class="text-gray-600 hover:text-gray-900 px-3 py-2">Home</a>
+                        <a href="referrals.html" class="text-gray-900 font-semibold px-3 py-2 border-b-2 border-blue-600">Referrals</a>
+                        <a href="messages.html" class="text-gray-600 hover:text-gray-900 px-3 py-2 relative">
+                            Messages
+                            <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button onclick="window.location.href='create-post.html'" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 font-semibold">
+                        + New Post
+                    </button>
+                    <a href="profile.html" class="flex items-center space-x-2 hover:bg-gray-100 px-3 py-2 rounded-lg">
+                        <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold">
+                            JD
+                        </div>
+                        <span class="hidden md:block text-sm font-medium">John Doe</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4 py-6">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Referral Board</h1>
+            <p class="text-gray-600">Browse open positions from verified employees or find candidates seeking referrals</p>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 py-6">
+        <!-- Toggle & Filters -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 space-y-4 md:space-y-0">
+            <!-- Toggle -->
+            <div class="bg-white rounded-lg p-1 flex">
+                <button class="px-6 py-2 rounded-md bg-blue-600 text-white font-semibold">
+                    Giving Referrals
+                </button>
+                <button class="px-6 py-2 rounded-md text-gray-600 hover:bg-gray-100 font-semibold">
+                    Seeking Referrals
+                </button>
+            </div>
+
+            <!-- Search & Filter -->
+            <div class="flex space-x-3">
+                <input type="text"
+                       placeholder="Search by company or role..."
+                       class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent w-64">
+                <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                    <option>All Companies</option>
+                    <option>Microsoft</option>
+                    <option>Google</option>
+                    <option>Amazon</option>
+                    <option>Meta</option>
+                </select>
+                <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                    <option>All Roles</option>
+                    <option>Software Engineer</option>
+                    <option>Product Manager</option>
+                    <option>Data Scientist</option>
+                    <option>Designer</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Main Content - Referral Listings -->
+            <div class="lg:col-span-2 space-y-4">
+                <!-- Referral Card 1 -->
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="p-5">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-semibold">
+                                    SA
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Sarah Anderson</div>
+                                    <div class="text-sm text-gray-500">
+                                        <span class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded text-xs font-medium">Microsoft</span>
+                                        <span class="mx-1">•</span>
+                                        <span>Senior SWE</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="text-xs text-gray-500">2h ago</span>
+                        </div>
+
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Senior Software Engineer - Azure Compute</h3>
+
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span class="font-medium">Requirements:</span>
+                                <span class="ml-1">5+ years experience, Distributed Systems, Cloud</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span>Redmond, WA (Hybrid)</span>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-700 text-sm mb-4">
+                            Join our team building the next generation of Azure compute infrastructure. We're looking for engineers passionate about distributed systems and scalable cloud platforms. Great team culture and exciting technical challenges!
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">#azure</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">#distributed-systems</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">#cloud</span>
+                        </div>
+
+                        <div class="flex items-center justify-between pt-4 border-t">
+                            <div class="flex items-center space-x-4 text-sm text-gray-600">
+                                <span class="flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                    </svg>
+                                    124 views
+                                </span>
+                                <span class="flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
+                                    </svg>
+                                    12 interested
+                                </span>
+                            </div>
+                            <button class="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700">
+                                Send DM
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Referral Card 2 -->
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="p-5">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-semibold">
+                                    MK
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Michael Kim</div>
+                                    <div class="text-sm text-gray-500">
+                                        <span class="bg-red-100 text-red-800 px-2 py-0.5 rounded text-xs font-medium">Google</span>
+                                        <span class="mx-1">•</span>
+                                        <span>Staff Engineer</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="text-xs text-gray-500">5h ago</span>
+                        </div>
+
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Multiple SWE Openings - Google Search</h3>
+
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span class="font-medium">Requirements:</span>
+                                <span class="ml-1">L4/L5, Strong algorithms, System design</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span>Mountain View, CA</span>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-700 text-sm mb-4">
+                            Our team is hiring multiple engineers across different levels. Working on core search infrastructure - huge scale, interesting problems. Send me your resume if you're interested!
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">#search</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">#infrastructure</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">#L4</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">#L5</span>
+                        </div>
+
+                        <div class="flex items-center justify-between pt-4 border-t">
+                            <div class="flex items-center space-x-4 text-sm text-gray-600">
+                                <span class="flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                    </svg>
+                                    89 views
+                                </span>
+                                <span class="flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
+                                    </svg>
+                                    8 interested
+                                </span>
+                            </div>
+                            <button class="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700">
+                                Send DM
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Referral Card 3 -->
+                <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition">
+                    <div class="p-5">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="flex items-start space-x-3">
+                                <div class="w-12 h-12 bg-teal-600 rounded-full flex items-center justify-center text-white font-semibold">
+                                    JS
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Jessica Smith</div>
+                                    <div class="text-sm text-gray-500">
+                                        <span class="bg-purple-100 text-purple-800 px-2 py-0.5 rounded text-xs font-medium">Meta</span>
+                                        <span class="mx-1">•</span>
+                                        <span>Senior PM</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="text-xs text-gray-500">1d ago</span>
+                        </div>
+
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Product Manager - Messenger</h3>
+
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span class="font-medium">Requirements:</span>
+                                <span class="ml-1">4+ years PM, Consumer products, Data-driven</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span>Menlo Park, CA</span>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-700 text-sm mb-4">
+                            Looking for a PM to drive messaging features used by billions. If you have experience with consumer social products and love data-driven decision making, let's talk!
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">#pm</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">#messenger</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">#consumer</span>
+                        </div>
+
+                        <div class="flex items-center justify-between pt-4 border-t">
+                            <div class="flex items-center space-x-4 text-sm text-gray-600">
+                                <span class="flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                                    </svg>
+                                    56 views
+                                </span>
+                                <span class="flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
+                                    </svg>
+                                    5 interested
+                                </span>
+                            </div>
+                            <button class="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700">
+                                Send DM
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar - Stats & Tips -->
+            <div class="lg:col-span-1 space-y-4">
+                <div class="bg-white rounded-lg shadow-sm p-4 sticky top-20">
+                    <h3 class="font-semibold text-gray-900 mb-3">Referral Stats</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-600">Active Referral Offers</span>
+                            <span class="font-semibold text-blue-600">234</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-600">Job Seekers</span>
+                            <span class="font-semibold text-green-600">156</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-600">This Week</span>
+                            <span class="font-semibold text-gray-900">+42</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 rounded-lg p-4">
+                    <h4 class="font-semibold text-blue-900 mb-2 text-sm">💡 Pro Tips</h4>
+                    <ul class="text-xs text-blue-800 space-y-2">
+                        <li>• Be specific about requirements</li>
+                        <li>• Respond to DMs within 48 hours</li>
+                        <li>• Update posts when positions are filled</li>
+                        <li>• Build reputation by helping others</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm p-4">
+                    <h4 class="font-semibold text-gray-900 mb-2 text-sm">Top Companies Hiring</h4>
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-700">Microsoft</span>
+                            <span class="text-gray-500">45 posts</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-700">Google</span>
+                            <span class="text-gray-500">38 posts</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-700">Amazon</span>
+                            <span class="text-gray-500">32 posts</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-700">Meta</span>
+                            <span class="text-gray-500">28 posts</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
